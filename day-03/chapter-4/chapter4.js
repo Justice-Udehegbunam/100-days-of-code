@@ -169,7 +169,7 @@ console.log(array2?.[1]);
 
 // JSON FEATURES
 /* 
-1. it is a serialization methdo for data
+1. it is a serialization method for data
 2. it is similar to js but with few restrictions: 
 a. All property names has to be surrounded with double quotes
 b. only simple data is allowed

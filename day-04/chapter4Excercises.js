@@ -76,7 +76,7 @@ let right = 4;
 // Swapping elements at index 0 and 4
 [arr[left], arr[right]] = [arr[right], arr[left]];
 
-// console.log(arr); // [5, 2, 3, 4, 1]
+// console.log(arr);
 
 const reverseArrayInPlace = (arr = []) => {
   let left = 0;
@@ -92,8 +92,8 @@ const reverseArrayInPlace = (arr = []) => {
   return arr;
 };
 
-// console.log(reverseArray([1029, 3, 4, 5, 6, 7, 8, 9, 0]));
-// console.log(reverseArrayInPlace([2, 3]));
+console.log(reverseArray([1029, 3, 4, 5, 9, 0]));
+console.log(reverseArrayInPlace([2, 3]));
 
 // A LIST
 
@@ -106,13 +106,13 @@ const arrayToList = (arr = []) => {
       rest: list,
     };
   }
-  // console.log(list.rest);
-  // console.log(JSON.stringify(list, null, 2));
+  console.log(list.rest);
+  console.log(JSON.stringify(list, null, 2));
 
   return list;
 };
 
-// console.log(arrayToList([1, 2, 3, 4]));
+console.log(arrayToList([1, 2, 3, 4]));
 
 // ListToArray function
 
@@ -186,4 +186,4 @@ const deepEqual = (a, b) => {
   return true;
 };
 
-console.log(deepEqual({ a: 10 }, { b: "10" }));
+//console.log(deepEqual({ a: 10 }, { b: "10" }));
