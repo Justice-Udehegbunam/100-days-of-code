@@ -17,7 +17,7 @@ I’m diving deep into software development, not just to clone websites but to t
 | 1   | Starting with JavaScript Basics |
 | 2   | Practicing with simple programs |
 | 3   | Objects and Arrays              |
-| 3   | Object mastery and Functions    |
+| 4   | Object mastery and Functions    |
 
 Follow my journey as I push towards becoming a stronger developer, one day at a time. 💻
 
