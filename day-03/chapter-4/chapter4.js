@@ -146,3 +146,31 @@ console.log(spreadOfTest); /* [
   'o',   ' ', 'a', 'r',
   'r',   'a', 'y'
 ] */
+
+// DESTRUCTURING
+
+const array2 = [1, 2, 61, 58, 90, 10];
+
+const phi = ([n00, n01, n02, n03]) => {
+  return (
+    (n03 * n00 - n02 * n01) /
+    Math.sqrt((n02 + n03) * (n00 + n01) * (n01 + n03) * (n00 + n02))
+  );
+};
+
+const newArray = array2.slice(0, 5);
+
+console.log(newArray);
+
+console.log(phi([...newArray]));
+
+console.log(array2?.[1]);
+//Can you see something funny here ordinarily this is a bracket notation call but when you are trying to introduce something that you arent sure off i.e "?" you just have to make ot a dot notation call to get it to work.
+
+// JSON FEATURES
+/* 
+1. it is a serialization methdo for data
+2. it is similar to js but with few restrictions: 
+a. All property names has to be surrounded with double quotes
+b. only simple data is allowed
+ */

@@ -2,7 +2,7 @@ Here’s a possible continuation for your Day 4 README, summarizing what you've 
 
 ---
 
-# Day 04: JavaScript Data Types Review
+# Day 03: JavaScript Data Types Review
 
 At first, taking on this chapter was challenging because I thought I already knew everything about JS data types. But I quickly realized there was more to uncover:
 
