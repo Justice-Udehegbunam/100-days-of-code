@@ -90,7 +90,7 @@ Today, I delved into deeper concepts of **JavaScript**, specifically focusing on
 
 ## Goals for Tomorrow:
 
-- Continue exploring **Chapter 6** of _Eloquent JavaScript_, diving deeper into OOP and more advanced class-based examples.
+- Continue exploring **Chapter 6** of _Eloquent JavaScript_, diving deeper into OOP and more advanced class-based examples. (Was able to later finish)
 - Begin with the first practice project in the book.
 
 ---
