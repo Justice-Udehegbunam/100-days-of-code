@@ -20,6 +20,7 @@ I’m diving deep into software development, not just to clone websites but to t
 | 4   | Object mastery and Functions           |
 | 5   | Key Concepts in Higher order Functions |
 | 6   | Abstraction and Object Prototyping     |
+| 7   | Review and Pactice Project             |
 
 Follow my journey as I push towards becoming a stronger developer, one day at a time. 💻
 
