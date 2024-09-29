@@ -259,3 +259,37 @@ function lazyRobot({ place, parcels }, route) {
 }
 
 compareRobots(lazyRobot, [], fasterRobot, []);
+
+// PERSISTENCE
+
+class PGroup {
+  #members;
+  constructor(memmbers) {
+    this.#members = memmbers;
+  }
+
+  add(value) {
+    if (!this.has(value)) {
+      return new PGroup(this.#members.concat([value]));
+    }
+  }
+
+  delete(value) {
+    if (this.has(value)) {
+      return new PGroup(this.#members.filter((member) => member !== value));
+    }
+  }
+
+  has(value) {
+    return this.#members.includes(value);
+  }
+
+  static empty = new PGroup([]);
+}
+
+/* Why Use a Single PGroup.empty Instance?
+Immutability: The PGroup class is immutable. This means any operations (add, delete) that modify the set will create a new instance, rather than altering the original instance. Therefore, once you create an empty group, it will always remain empty. There's no need to create a new empty group each time since it will never change.
+
+Memory Efficiency: Since the empty group never changes, creating multiple empty groups would just waste memory. By reusing the same PGroup.empty instance, you save space while maintaining the same functionality.
+
+Simplicity: A single empty group simplifies the API and makes it easier to work with the class. You always know where to start: with PGroup.empty */
