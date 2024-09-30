@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --bg-col: hsl(228, 33%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-blue: hsl(239, 58%, 95%);
+  --moderate-blue: hsl(238, 40%, 52%);
+  --very-light-grayish-blue: hsl(223, 19%, 87%);
+  --light-gray: hsl(223, 19%, 93%);
+  --text-color: hsl(211, 10%, 45%);
+  --dark-blue: hsl(238, 40%, 52%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span {
+  font-size: 14px;
+  color: var(--moderate-blue);
+  font-weight: 700;
+}
+
+button {
+  outline: none;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 90;
+  }
+}
+
+p {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+input {
+  outline: none;
+}
+
+body {
+  background-color: var(--bg-col);
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+
+  .main {
+    margin: 24px auto;
+    overflow-y: auto;
+    padding-top: 24px;
+    height: calc(100vh - 140px);
+    overflow-y: scroll;
+
+    .container {
+      display: flex;
+      margin: 0 auto;
+      max-width: 600px;
+      border-radius: 6px;
+      padding: 16px;
+      background-color: var(--white);
+    }
+
+    .card {
+      box-shadow: 0 1px 1px 0 rgb(167, 167, 167);
+      margin-bottom: 1.25rem;
+
+      .control {
+        margin: 0 16px 0 4px;
+        padding: 8px;
+        height: 80px;
+        background-color: var(--light-grayish-blue);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        button {
+          background-color: transparent;
+          color: var(--very-light-grayish-blue);
+          font-weight: 700;
+          font-size: 24px;
+        }
+      }
+
+      .user-info-action {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        div {
+          margin-bottom: 8px;
+
+          .user-details {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .name {
+              font-weight: 600;
+              color: black;
+            }
+
+            img {
+              width: 28px;
+            }
+          }
+        }
+
+        .reply-action {
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            gap: 6px;
+          }
+        }
+      }
+
+      .text-container {
+        margin-bottom: 6px;
+        p {
+          color: hsl(211, 10%, 45%);
+        }
+      }
+    }
+    .position {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: var(--bg-col);
+      left: -9px;
+      .form {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+
+        input {
+          width: 75%;
+          height: 80px;
+          border: 2px solid var(--light-grayish-blue);
+          display: inline-block;
+          border-radius: 4px;
+        }
+
+        button {
+          background: var(--dark-blue);
+          width: 80px;
+          display: inline;
+          height: 40px;
+          text-transform: uppercase;
+          color: var(--white);
+          font-size: 14px;
+          font-weight: 500;
+          border-radius: 4px;
+        }
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin: 18px 0;
+
+        a {
+          color: hsl(228, 45%, 44%);
+        }
+      }
+    }
+  }
+}
