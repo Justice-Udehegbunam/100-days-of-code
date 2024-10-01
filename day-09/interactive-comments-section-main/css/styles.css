@@ -83,6 +83,9 @@ body .main .card .control button {
   font-weight: 700;
   font-size: 24px;
 }
+body .main .card .control button:hover, body .main .card .control button:active {
+  color: var(--moderate-blue);
+}
 body .main .card .user-info-action {
   display: flex;
   justify-content: space-between;
@@ -100,6 +103,10 @@ body .main .card .user-info-action div .user-details {
 body .main .card .user-info-action div .user-details .name {
   font-weight: 600;
   color: black;
+}
+body .main .card .user-info-action div .user-details .name:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 body .main .card .user-info-action div .user-details img {
   width: 28px;

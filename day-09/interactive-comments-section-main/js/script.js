@@ -1,16 +1,17 @@
 /* TASKS
 1. Be able to retrieve messages from data.json DONE
-2. be able to send messages that will be saved in data.json
+2. be able to send messages that will be saved in data.json JUST STARTED
 3. Be able to have a button that switches between users.
 4. Be able to store the actual time that a message was posted 
 5. Be able to edit or delete a particular message that was written by the user 
 6. Reply to Specific Comments
-7. Like or Upvote/Downvote Messages
+7. Like or Upvote/Downvote Messages IN PROGRESS
 8. */
 
 //console.log(document.body.innerHTML);
 
 const mainEl = document.getElementById("mainEl");
+// console.log(mainEl);
 
 const fetchData = async () => {
   try {
@@ -25,7 +26,7 @@ const fetchData = async () => {
 
     renderCard(comments);
 
-    console.log(currentUser, comments);
+    // console.log(currentUser, comments);
   } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);
   }
@@ -33,10 +34,61 @@ const fetchData = async () => {
 
 fetchData();
 
-const renderCard = (comments) => {
-  // Create the card container section
+const upVote = (e) => {
+  const controlDiv = e.target.parentElement;
+  const voteSpan = controlDiv.querySelector(".vote-count");
+  let value = Number(voteSpan.textContent);
+  voteSpan.textContent = value + 1;
+  localStorage.setItem("value", value);
+};
 
+const downVote = (e) => {
+  const controlDiv = e.target.parentElement;
+  const voteSpan = controlDiv.querySelector(".vote-count");
+  let value = Number(voteSpan.textContent);
+
+  voteSpan.textContent = value - 1;
+  localStorage.setItem("value", value);
+};
+
+const stopReload = (e) => {
+  e.preventDefault();
+};
+
+const createForm = () => {
+  const formContainer = document.createElement("section");
+  formContainer.classList.add("position");
+
+  const form = document.createElement("form");
+  form.addEventListener("click", (e) => stopReload(e));
+  form.classList.add("container", "form");
+  form.innerHTML = `<img src="./images/avatars/image-juliusomo.png" alt="person" />
+    <input type="text" aria-label="Add comments" autofocus />
+
+    <button type="submit" id="submit">Send</button>`;
+
+  const attribution = document.createElement("div");
+  attribution.classList.add("attribution");
+
+  attribution.innerHTML = ` Challenge by
+  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+    >Frontend Mentor</a
+  >. Coded by
+  <a href="https://www.linkedin.com/in/justice-udehegbunam/"
+    >Justice Udehegbunam</a
+  >.`;
+
+  formContainer.appendChild(form);
+  formContainer.appendChild(attribution);
+
+  return mainEl.appendChild(formContainer);
+};
+
+createForm();
+
+const renderCard = (comments) => {
   comments.forEach((comment) => {
+    // Create the card container section
     const cardContainer = document.createElement("section");
     cardContainer.classList.add("card", "container");
 
@@ -44,15 +96,20 @@ const renderCard = (comments) => {
     const controlDiv = document.createElement("div");
     controlDiv.classList.add("control");
 
-    // Create buttons and span for voting control
+    // Create the vote count span
+    let voteCount = document.createElement("span");
+    voteCount.textContent = localStorage.getItem("value");
+    voteCount.classList.add("vote-count");
+
+    // Create plus button and attach event listener
     const plusBtn = document.createElement("button");
     plusBtn.textContent = "+";
+    plusBtn.addEventListener("click", (e) => upVote(e)); // Add event listener for upvote
 
-    const voteCount = document.createElement("span");
-    voteCount.textContent = comment.score; // Example vote count
-
+    // Create minus button
     const minusBtn = document.createElement("button");
     minusBtn.textContent = "-";
+    minusBtn.addEventListener("click", (e) => downVote(e));
 
     controlDiv.appendChild(plusBtn);
     controlDiv.appendChild(voteCount);
@@ -135,11 +192,8 @@ const renderCard = (comments) => {
     cardContainer.appendChild(alignContainer);
 
     // Append the entire card to the main element
-    return mainEl.appendChild(cardContainer);
+    mainEl.appendChild(cardContainer);
   });
 
-  console.log(comments);
+  console.log(mainEl);
 };
-
-// Call the function to render the card
-renderCard();

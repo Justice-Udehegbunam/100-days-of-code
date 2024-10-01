@@ -85,6 +85,11 @@ body {
           color: var(--very-light-grayish-blue);
           font-weight: 700;
           font-size: 24px;
+
+          &:hover,
+          &:active {
+            color: var(--moderate-blue);
+          }
         }
       }
 
@@ -105,6 +110,11 @@ body {
             .name {
               font-weight: 600;
               color: black;
+
+              &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+              }
             }
 
             img {
