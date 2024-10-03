@@ -12,15 +12,20 @@ I’m diving deep into software development, not just to clone websites but to t
 
 ## Progress Tracker
 
-| Day | Task/Challenge                         |
-| --- | -------------------------------------- |
-| 1   | Starting with JavaScript Basics        |
-| 2   | Practicing with simple programs        |
-| 3   | Objects and Arrays                     |
-| 4   | Object mastery and Functions           |
-| 5   | Key Concepts in Higher order Functions |
-| 6   | Abstraction and Object Prototyping     |
-| 7   | Review and Pactice Project             |
+| Day | Task/Challenge                            |
+| --- | ----------------------------------------- |
+| 1   | Starting with JavaScript Basics           |
+| 2   | Practicing with simple programs           |
+| 3   | Objects and Arrays                        |
+| 4   | Object mastery and Functions              |
+| 5   | Key Concepts in Higher order Functions    |
+| 6   | Abstraction and Object Prototyping        |
+| 7   | Review and Pactice Project                |
+| 8   | Personal Project contd                    |
+| 9   | Personal Project contd                    |
+| 10  | Personal Project contd and break to learn |
+| 11  | How to handle bugs in Javascript          |
+| 12  | Regex Refresher                           |
 
 Follow my journey as I push towards becoming a stronger developer, one day at a time. 💻
 
