@@ -1,0 +1,55 @@
+// Regular Expressions
+/* Regular Expression is a tool used in not only javascript but many other programming languages and its is basically a way to describe patterns in string data */
+
+// Creating a regular expression
+
+// A regular expression is a type of OBJECT. (because it behaves kind of like a constructor in a class)
+//  It can be constructed by either using the RegExp() method or enclosing the code in backslashes /"code"/
+
+* Limits of the Hyphen (-) in Character Classes:
+Used to Define Ranges:
+When placed between two characters, the hyphen (-) is used to define a range. For example:
+[a-z] matches any lowercase letter.
+[A-Z] matches any uppercase letter.
+[0-9] matches any digit from 0 to 9.
+Position Matters:
+If you place the hyphen (-) at the start or end of a character class, it is treated as a literal hyphen and no longer defines a range:
+[-a-z] matches - and any lowercase letter.
+[a-z-] matches any lowercase letter and -.
+Range Must Be Valid:
+The characters in a range must follow a logical order. For example, [A-z] is technically valid, but it includes extra characters between Z and a in the ASCII table, which may lead to unexpected matches.
+The range [A-z] would match not only A-Z and a-z, but also symbols like [ and \ (based on ASCII values).
+What doesn't the hyphen work for?
+Non-Ordered Characters:
+For non-alphabetic or non-numeric ranges, hyphens don’t work. For example, [z-a] will not work because it’s not a valid range (the characters go in the reverse order).
+When Outside of Character Classes:
+Outside of square brackets, the hyphen is interpreted as a literal character, not a range. For instance, /0-9/ would match the exact sequence 0-9 in a string, not the range of digits. */
+
+// SPECIAL REGEX CHARACTER SHORTCUTS
+/*Used to match:
+ \d Any digit character
+\w An alphanumeric character (“word character”)
+\s Any whitespace character (space, tab, newline, and similar)
+\D A character that is not a digit
+\W A nonalphanumeric character
+\S A nonwhitespace character
+. Any character except for newline 
+^ - ANCHOR/CARET: which checks majorly the first character that matches the condition
+\p{L} Any letter
+\p{N} Any numeric character
+\p{P} Any punctuation character
+\P{L} Any nonletter (uppercase P inverts)
+\p{Script=Hangul} Any character from the given script
+*/
+
+* You could match a date and time format like 01-30-2003 15:20 with
+the following expression:
+let dateTime = /\d\d-\d\d-\d\d\d\d \d\d:\d\d/;
+console.log(dateTime.test("01-30-2003 15:20"));
+
+When you put a plus sign (+) after something in a regular expression, it indicates that the element may be repeated more than once
+
+The star (*) has a similar meaning but also allows the pattern to match zero times (ie it behaves like a do while loop which will log once if the condition is false)
+
+A question mark (?) makes a part of a pattern optional, meaning
+it may occur zero times or one time. In the following example, the u character is allowed to occur, but the pattern also matches when it is missing: usually just for the character immediately before the "?" sign
