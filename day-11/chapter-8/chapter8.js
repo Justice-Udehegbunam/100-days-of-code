@@ -70,3 +70,79 @@ function numberToString(n, base = 10) {
   }
 }
 console.log(numberToString(13, 10));
+
+// Cleaning up after exceptions
+
+// function promptDirection(question) {
+//   let result = prompt(question);
+//   if (result.toLowerCase() == "left") return "L";
+//   if (result.toLowerCase() == "right") return "R";
+//   throw new Error("Invalid direction: " + result); // the throw new error is use to create An excption that then will be handled in a try/catch block
+// }
+// function look() {
+//   if (promptDirection(`Which way? \n 'Left' / 'Right'`) == "L") {
+//     return "a house";
+//   } else {
+//     return "two angry bears";
+//   }
+// }
+// try {
+//   console.log("You see", look());
+// } catch (error) {
+//   console.log("Something went wrong: " + error.message); // this gives the message gotten from the stack about the error
+
+//   // While this "error.stack" gives the full resource and links to debug the code
+// }
+
+// for (;;) {
+//   try {
+//     let dir = promptDirection("Where?"); // ← typo!
+//     console.log("You chose ", dir);
+//     break;
+//   } catch (e) {
+//     console.log("Not a valid direction. Try again."); // This is called a blanket-catch which just means that handling all forms of error with a generic message
+//   }
+// }
+// The for (;;) construct is a way to intentionally create a loop that doesn’t terminate on its own.
+
+/* As a general rule, don’t blanket-catch exceptions unless it is for the purpose of “routing” them somewhere—for example, over the network to tell another system that our program crashed */
+
+// How to catch Specific kinds of exceptions
+
+/* A way to fix that infinte loop such that the catch block only deals with error that are under the properies of the Error class is t create a new extension ("So as to not affect the flow with the globals") the error object like so */
+class inputError extends Error {}
+
+//  then
+
+function promptDirection(question) {
+  let result = prompt(question);
+  if (result.toLowerCase() == "left") return "L";
+  if (result.toLowerCase() == "right") return "R";
+  throw new inputError("Invalid direction" + result);
+}
+
+for (;;) {
+  for (;;) {
+    try {
+      let dir = promptDirection("Where?"); // ← typo!
+      console.log("You chose ", dir);
+      break;
+    } catch (e) {
+      if (e instanceof inputError) {
+        console.log("Not a valid direction. Try again.");
+      }
+      throw e;
+    }
+  }
+}
+
+// Assertions
+// Assertions are checks inside a program that verify that something is the way it is supposed to be
+// They are used not to handle situations that can come up in normal operation but to find programmer mistakes (i.e something that is actually normal but your program doesnt need that) e.g
+
+function firstElement(array) {
+  if (array.length == 0) {
+    throw new Error("firstElement called with []");
+  }
+  return array[0];
+}
