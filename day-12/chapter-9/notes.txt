@@ -93,6 +93,8 @@ abc/ A sequence of characters
 /\p{L}/u Any letter character
 /^/ Start of input
 /$/ End of input
+/[^<value>] test for any value that u dont want to be inside that string
+/^[^e]*$/i test lazily everywhere if something eg e exists
 /(?=a)/ A look-ahead test
 
 The regex /\(?=a\)/ represents a lookahead assertion. In regex, lookaheads allow you to check if a certain pattern exists ahead of the current position in the string, without consuming any characters.
