@@ -26,6 +26,7 @@ I’m diving deep into software development, not just to clone websites but to t
 | 10  | Personal Project contd and break to learn |
 | 11  | How to handle bugs in Javascript          |
 | 12  | Regex Refresher                           |
+| 12  | Regex Refresher Contd                     |
 
 Follow my journey as I push towards becoming a stronger developer, one day at a time. 💻
 
