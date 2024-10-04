@@ -164,15 +164,15 @@ let quotedText = /'([^']+)-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)'/; 
 
 // AND JUST LIKE WITH ANY OTHER OBJECT YOU CAN ALSO CREATE YOUR OWN FAKE DATE AND TIME
 
-console.log(new Date(2023, 10, 20, 3, 15, 50, 98));
+// console.log(new Date(2023, 10, 20, 3, 15, 50, 98));
 
 // it basically stores the months as an array leading to a minus one property and also the hour is first checked based on the time zone the user is and then converts to its equivalent in UTC
 
-console.log(new Date().getUTCDate()); // outputs 3 which is for 3rd sept
+// console.log(new Date().getUTCDate()); // outputs 3 which is for 3rd sept
 
-console.log(new Date().getTime()); // returns the amount of miliseconds elapsed since jan 1  1970 which was th time used by the UNIX machine then
+// console.log(new Date().getTime()); // returns the amount of miliseconds elapsed since jan 1  1970 which was th time used by the UNIX machine then
 
-console.log(new Date(-1727966663226)); // this converts the miliseconds to real useful date "2024-10-03T14:44:23.226Z" and can also take minus which in that case returns the date backwards from 1970
+// console.log(new Date(-1727966663226)); // this converts the miliseconds to real useful date "2024-10-03T14:44:23.226Z" and can also take minus which in that case returns the date backwards from 1970
 // If you give the Date constructor a single argument, that argument is treated as such a millisecond count.
 
 /* Date objects provide methods such as getFullYear, getMonth, getDate , getHours, getMinutes, and getSeconds to extract their components.
@@ -194,3 +194,108 @@ console.log(getDate("111-1-2022"));
 character. */
 
 // Caret (^) and Dollar ($) sign  - The carets matches based on the start and then the dollar sign matches the end.
+
+/* Choice patterns
+
+he pipe character (|) denotes a choice between
+the pattern to its left and the pattern to its right. We can use it in expressions like this:
+
+let animalCount = /\d+ (pig|cow|chicken)s?/;
+console.log(animalCount.test("15 pigs"));
+
+PArentheses are used to limit the part of the pattern to which the pipe operator appluies, and you can put multiple of them together just like above*/
+
+//  THE REPLACE METHOD
+
+console.log("papa".replace("p", "m")); // this replaces the first p instance it can find
+console.log("papa".replace(/[p]/g, "m")); // this tells it to replace any p it can find
+
+console.log("Borobudur".replace(/[ou]/, "a")); //  this just shows that note it can pick any one frm it that is true
+// → Barobudur
+console.log("Borobudur".replace(/[ou]/g, "a"));
+// → Barabadar
+
+let stock = "1 lemon, 2 cabbages, and 101 eggs";
+function minusOne(match, amount, unit) {
+  // the match param there holds the operating value ie "1 lemon"
+  amount = Number(amount) - 1;
+  if (amount == 1) {
+    // only one left, remove the 's'
+    unit = unit.slice(0, unit.length - 1);
+  } else if (amount == 0) {
+    amount = "no";
+  }
+  return amount + " " + unit;
+}
+console.log(stock.replace(/(\d+) (\p{L}+)/gu, minusOne));
+
+const stripComments = (code) => {
+  let regex = /\/\/. *|\/\*[^]*\*\//g;
+
+  return code.replace(regex, "");
+};
+
+//console.log(
+// stripComments(
+// "// re1 == re2 ? console.log(true) : console.log(false); // This prints faslse because since objects are just references to a particular location in memory and no two object is the same /* ome characters, such as question marks and plus signs, have special meanings in regular expressions and must be preceded by a backslash if they are meant to represent the character itself. And just like other built in objects they have a number of methods of which the simplest or most used is the .test method Although regex is designed to work with strings, non-string values are implicitly converted to strings when used with regular expressions in JavaScript. However, regex itself doesn’t directly operate on anything other than text*/"
+//  )
+//);
+
+//  THE SEARCH METHOD
+/* While the indexOf method on strings cannot be called with a regular expression, there is another method, search, that does expect a regular expression. Like indexOf, it returns the first index on which the expression was found, or -1 when it wasn’t found. */
+
+console.log(" word".search(/\S/));
+// → 1
+console.log(" ".search(/\S/));
+// → -1
+
+//  INI File
+/* An INI file (short for "initialization file") is a plain text configuration file used by software programs to store settings and options. The format was popularized in the early days of Windows operating systems but continues to be used in a variety of applications today. INI files are simple to understand and easy to modify, making them ideal for storing configuration data in a structured yet human-readable way.
+
+Structure of an INI File
+INI files typically consist of:
+
+Sections: Enclosed in square brackets [ ], these divide the file into logical groups of settings.
+Keys: Each setting is represented by a key-value pair (key=value) within a section.
+Comments: Lines starting with ; or # are comments and are ignored by the program that reads the INI file. */
+
+function parseINI(string) {
+  let result = {};
+  let section = result;
+
+  for (let line of string.split(/\r?\n/)) {
+    line = line.trim();
+
+    if (!line || line.startsWith(";") || line.startsWith("#")) {
+      console.log(line);
+      continue;
+    }
+
+    let match;
+    if ((match = line.match(/^(\w+)=(.*)$/))) {
+      section[match[1]] = match[2];
+    } else if ((match = line.match(/^\[(.*)\]$/))) {
+      section = result[match[1]] = {};
+    } else if (!/^\s*(;|$)/.test(line)) {
+      throw new Error("Line '" + line + "' is not valid.");
+    }
+  }
+  return result;
+}
+
+console.log(
+  parseINI(`[Database]
+Host=localhost
+Port=3306
+User=root
+Password=password123
+; first test
+
+#second test
+
+[Logging]
+LogLevel=Info
+LogFile=logfile.txt
+
+`)
+);
