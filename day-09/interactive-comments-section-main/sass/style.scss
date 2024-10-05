@@ -64,6 +64,7 @@ body {
     .card {
       box-shadow: 0 1px 1px 0 rgb(167, 167, 167);
       margin-bottom: 1.25rem;
+      width: 100%;
 
       .control {
         margin: 0 16px 0 4px;
@@ -93,7 +94,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        width: 100%;
+        width: calc(660px - 140px);
 
         div {
           margin-bottom: 8px;
@@ -103,7 +104,6 @@ body {
             justify-content: center;
             align-items: center;
             gap: 10px;
-            width: 100%;
 
             .name {
               font-weight: 600;
@@ -127,24 +127,35 @@ body {
             justify-content: center;
             align-items: center;
             background-color: transparent;
+            padding: 4px 6px;
             gap: 6px;
+            border: 1px solid transparent;
+
+            &:hover {
+              background: var(--light-grayish-blue);
+              border-radius: 2px;
+            }
           }
         }
       }
 
       .text-container {
         margin-bottom: 6px;
+        display: block;
         p {
           color: hsl(211, 10%, 45%);
         }
+      }
+
+      &:last-child {
+        margin-bottom: 100px;
       }
     }
     .position {
       position: fixed;
       bottom: 0;
-      width: 100%;
+      width: calc(100% - 16px);
       background: var(--bg-col);
-      left: -9px;
       .form {
         width: 100%;
 

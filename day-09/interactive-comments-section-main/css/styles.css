@@ -61,6 +61,7 @@ body .main .container {
 body .main .card {
   box-shadow: 0 1px 1px 0 rgb(167, 167, 167);
   margin-bottom: 1.25rem;
+  width: 100%;
 }
 body .main .card .control {
   margin: 0 16px 0 4px;
@@ -86,7 +87,7 @@ body .main .card .user-info-action {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
+  width: 520px;
 }
 body .main .card .user-info-action div {
   margin-bottom: 8px;
@@ -96,7 +97,6 @@ body .main .card .user-info-action div .user-details {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 100%;
 }
 body .main .card .user-info-action div .user-details .name {
   font-weight: 600;
@@ -114,20 +114,29 @@ body .main .card .user-info-action .reply-action button {
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  padding: 4px 6px;
   gap: 6px;
+  border: 1px solid transparent;
+}
+body .main .card .user-info-action .reply-action button:hover {
+  background: var(--light-grayish-blue);
+  border-radius: 2px;
 }
 body .main .card .text-container {
   margin-bottom: 6px;
+  display: block;
 }
 body .main .card .text-container p {
   color: hsl(211, 10%, 45%);
 }
+body .main .card:last-child {
+  margin-bottom: 100px;
+}
 body .main .position {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: calc(100% - 16px);
   background: var(--bg-col);
-  left: -9px;
 }
 body .main .position .form {
   width: 100%;

@@ -117,6 +117,7 @@ document.getElementById("submit").addEventListener("click", handleFormSubmit);
 
 const commentsContainer = document.createElement("div");
 commentsContainer.id = "commentsContainer";
+commentsContainer.classList.add("scrollable");
 mainEl.appendChild(commentsContainer);
 
 const renderCard = (comments) => {
