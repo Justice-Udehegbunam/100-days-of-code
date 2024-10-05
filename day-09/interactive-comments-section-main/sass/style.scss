@@ -38,10 +38,6 @@ p {
   color: var(--text-color);
 }
 
-input {
-  outline: none;
-}
-
 body {
   background-color: var(--bg-col);
   font-family: "Rubik", sans-serif;
@@ -97,6 +93,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        width: 100%;
 
         div {
           margin-bottom: 8px;
@@ -106,6 +103,7 @@ body {
             justify-content: center;
             align-items: center;
             gap: 10px;
+            width: 100%;
 
             .name {
               font-weight: 600;
@@ -158,12 +156,16 @@ body {
           height: 40px;
         }
 
-        input {
+        textarea {
           width: 75%;
-          height: 80px;
           border: 2px solid var(--light-grayish-blue);
           display: inline-block;
           border-radius: 4px;
+          font-family: inherit;
+          font-size: 16px;
+          padding: 8px 8px 0;
+          outline: none;
+          resize: none;
         }
 
         button {

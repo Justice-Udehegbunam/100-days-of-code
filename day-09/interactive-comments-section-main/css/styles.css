@@ -36,10 +36,6 @@ p {
   color: var(--text-color);
 }
 
-input {
-  outline: none;
-}
-
 body {
   background-color: var(--bg-col);
   font-family: "Rubik", sans-serif;
@@ -90,6 +86,7 @@ body .main .card .user-info-action {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
 }
 body .main .card .user-info-action div {
   margin-bottom: 8px;
@@ -99,6 +96,7 @@ body .main .card .user-info-action div .user-details {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  width: 100%;
 }
 body .main .card .user-info-action div .user-details .name {
   font-weight: 600;
@@ -140,12 +138,16 @@ body .main .position .form img {
   width: 40px;
   height: 40px;
 }
-body .main .position .form input {
+body .main .position .form textarea {
   width: 75%;
-  height: 80px;
   border: 2px solid var(--light-grayish-blue);
   display: inline-block;
   border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 8px 8px 0;
+  outline: none;
+  resize: none;
 }
 body .main .position .form button {
   background: var(--dark-blue);

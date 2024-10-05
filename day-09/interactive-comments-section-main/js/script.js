@@ -11,28 +11,59 @@
 //console.log(document.body.innerHTML);
 
 const mainEl = document.getElementById("mainEl");
-// console.log(mainEl);
+let commentsData = [];
 
 const fetchData = async () => {
   try {
     const response = await fetch("./data.json");
-
-    if (!response.ok) throw new Error("Response is not ok!");
+    if (!response.ok) throw new Error("Error fetching data");
 
     const data = await response.json();
+    commentsData = data.comments;
 
-    const currentUser = data.currentUser;
-    const comments = data.comments;
-
-    renderCard(comments);
-
-    // console.log(currentUser, comments);
+    renderCard(commentsData);
   } catch (error) {
-    console.error("There has been a problem with your fetch operation:", error);
+    console.error("There was an issue fetching data:", error);
   }
 };
 
 fetchData();
+
+const stopReload = (e) => e.preventDefault();
+
+const handleFormSubmit = () => {
+  let inputText = document.getElementById("inputText").value;
+
+  if (!inputText) return; // Prevent empty comments
+
+  const newComment = {
+    id: commentsData.length + 1,
+    content: inputText,
+    createdAt: "Just now", // Add current time logic if needed
+    score: 0, // Default score
+    user: {
+      image: {
+        png: "./images/avatars/image-juliusomo.png", // Current user's image
+      },
+      username: "juliusomo", // Current user's username
+    },
+    replies: [],
+  };
+
+  console.log(newComment.content);
+
+  // Add the new comment to the existing comments array
+  commentsData.push(newComment);
+
+  // Save to localStorage to simulate persistent data
+  localStorage.setItem("comments", JSON.stringify(commentsData));
+
+  // Clear the input field
+  document.getElementById("inputText").value = "";
+
+  // Re-render comments, including the new one
+  renderCard(commentsData);
+};
 
 const upVote = (e) => {
   const controlDiv = e.target.parentElement;
@@ -51,10 +82,6 @@ const downVote = (e) => {
   localStorage.setItem("value", value);
 };
 
-const stopReload = (e) => {
-  e.preventDefault();
-};
-
 const createForm = () => {
   const formContainer = document.createElement("section");
   formContainer.classList.add("position");
@@ -63,7 +90,7 @@ const createForm = () => {
   form.addEventListener("click", (e) => stopReload(e));
   form.classList.add("container", "form");
   form.innerHTML = `<img src="./images/avatars/image-juliusomo.png" alt="person" />
-    <input type="text" aria-label="Add comments" autofocus />
+<textarea id="inputText" rows="5" cols="30" style="word-wrap: break-word;"></textarea>
 
     <button type="submit" id="submit">Send</button>`;
 
@@ -86,7 +113,15 @@ const createForm = () => {
 
 createForm();
 
+document.getElementById("submit").addEventListener("click", handleFormSubmit);
+
+const commentsContainer = document.createElement("div");
+commentsContainer.id = "commentsContainer";
+mainEl.appendChild(commentsContainer);
+
 const renderCard = (comments) => {
+  commentsContainer.innerHTML = "";
+
   comments.forEach((comment) => {
     // Create the card container section
     const cardContainer = document.createElement("section");
@@ -98,7 +133,7 @@ const renderCard = (comments) => {
 
     // Create the vote count span
     let voteCount = document.createElement("span");
-    voteCount.textContent = localStorage.getItem("value");
+    voteCount.textContent = localStorage.getItem("value") || comment.score;
     voteCount.classList.add("vote-count");
 
     // Create plus button and attach event listener
@@ -191,8 +226,8 @@ const renderCard = (comments) => {
     cardContainer.appendChild(controlDiv);
     cardContainer.appendChild(alignContainer);
 
-    // Append the entire card to the main element
-    mainEl.appendChild(cardContainer);
+    // Append the entire card to the commentsContainer
+    commentsContainer.appendChild(cardContainer);
   });
 
   console.log(mainEl);
