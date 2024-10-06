@@ -94,7 +94,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        width: calc(660px - 140px);
+        max-width: calc(660px - 140px);
 
         div {
           margin-bottom: 8px;

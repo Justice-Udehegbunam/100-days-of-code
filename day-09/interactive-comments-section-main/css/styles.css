@@ -87,7 +87,7 @@ body .main .card .user-info-action {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 520px;
+  max-width: 520px;
 }
 body .main .card .user-info-action div {
   margin-bottom: 8px;
