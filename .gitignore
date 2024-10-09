@@ -12,6 +12,8 @@
 *.xd
 *.pdf
 node_modules
+chapter1
+
 
 
 # Avoid your project being littered with annoying .DS_Store files!
