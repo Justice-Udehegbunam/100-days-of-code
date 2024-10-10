@@ -14,3 +14,5 @@ This is what allows chrome to interact with the DOM because technically the DOM 
 - Because of its strong demand even in todays market
 - because of its non-blocking I/O
 - I need it for my interactive comments section app
+
+Essentially every file you create is basically a module in node.js with its own scope just like how a function is given its own scope
