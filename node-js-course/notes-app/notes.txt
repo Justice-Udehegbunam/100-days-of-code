@@ -1,3 +1,6 @@
 MODULES
 
 Remember modules from the frontend yh they also exist on the backend like the .writeFile()  and .writeFileSync()
+
+Local VS  Global modules 
+Local modules are the modules that u install that adds to the dependency listed in the package.json file, ewhile Global are installed with the -g flag and is installed basically to the user OS

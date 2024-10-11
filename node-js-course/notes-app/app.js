@@ -16,4 +16,4 @@ console.log(getNotes());
 import validator from "validator";
 
 console.log(validator.isEmail("justiceudehegnam@gmail.ru")); // outputs:  true
-console.log(validator.isURL("mead.ic")); //  outputs : true
+console.log(validator.isURL("mead.io")); //  outputs : true
