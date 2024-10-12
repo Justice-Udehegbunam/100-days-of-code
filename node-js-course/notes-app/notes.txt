@@ -7,3 +7,5 @@ Local modules are the modules that u install that adds to the dependency listed 
 
 Section 4 Command Line Arguments 
 If you try to run this command "node app.cjs justice" in your terminal normally it supposed to fail but it wont because the main node app.cjs will run but the last argument will be saved in somewhere called PROCESS Global variable
+
+Couldnt code much today but i have to eep the streak going, see you tommmorrow
