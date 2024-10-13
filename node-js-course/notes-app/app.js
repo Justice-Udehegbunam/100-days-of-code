@@ -8,8 +8,10 @@
 // console.log(names);
 
 import { getNotes } from "./notes.js";
+import process from "node:process";
 
-console.log(getNotes());
+// console.log(getNotes());
+console.log(process.argv[3]);
 
 // How to load in npm modules in node
 
