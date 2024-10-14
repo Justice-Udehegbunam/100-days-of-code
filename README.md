@@ -26,7 +26,16 @@ I’m diving deep into software development, not just to clone websites but to t
 | 10  | Personal Project contd and break to learn |
 | 11  | How to handle bugs in Javascript          |
 | 12  | Regex Refresher                           |
-| 12  | Regex Refresher Contd                     |
+| 13  | Regex Refresher Contd                     |
+| 14  | Practiced the project again               |
+| 15  | Began with Node.js                        |
+| 16  | Node.js Contd                             |
+| 17  | Node.js Contd Contd                       |
+| 18  | Node.js Contd Contd                       |
+| 19  | Node.js Contd Contd                       |
+| 20  | Node.js Contd Contd                       |
+| 21  | Node.js Contd Contd                       |
+| 21  | Started learning Wordpress                |
 
 Follow my journey as I push towards becoming a stronger developer, one day at a time. 💻
 
