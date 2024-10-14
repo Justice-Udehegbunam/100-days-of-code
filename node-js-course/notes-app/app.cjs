@@ -23,8 +23,8 @@ const { argv } = require("node:process"); // this is how node says you should re
 
 // How to use the process.argv
 
-const command = process.argv[2];
-
+/* const command = process.argv[2];
+ */
 // if (command === "add") {
 //   console.log(chalk.bgGreen("Adding!"));
 // } else if (command === "remove") {
@@ -56,8 +56,14 @@ you can see that the CLO is added to another index in the array but isnt parsed 
 ]
 remove */
 
-const regex = /--([\w]+)="([^"]*)"/iu;
-// const argument = '--title="The book of John"';
+const command = process.argv[2];
+console.log(command);
+
+const regex = /--([\w]+)=([^"]*)/iu;
+const argument = '--title="The book of John"';
+
+console.log(regex.test(argument));
+console.log(regex.test(command));
 
 function processArgument(argument) {
   if (!argument) {
@@ -66,20 +72,23 @@ function processArgument(argument) {
     console.log(chalk.bgRed("Argument format is wrong"));
   } else {
     const match = regex.exec(argument);
+    console.log(match);
+
     if (match) {
       const id = match[1]; // Captured id (e.g., title)
       const value = match[2]; // Captured value (e.g., The book of John)
 
       console.log("ID:", id);
       console.log("Value:", value);
+
+      console.log(chalk.bgGreen("Success"));
     }
   }
 }
 
-// Extract command-line arguments
-const args = process.argv;
-
 // The third argument (index 2) should be the one you pass like '--title="The book of John"'
-const argument = args[3];
+// const argument = args[3];
 
-processArgument(argument);
+processArgument(command);
+
+// Finally fixed it thank God
