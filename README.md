@@ -36,6 +36,8 @@ I’m diving deep into software development, not just to clone websites but to t
 | 20  | Node.js Contd Contd                       |
 | 21  | Node.js Contd Contd                       |
 | 21  | Started learning Wordpress                |
+| 22  | N/A              |
+| 23 |Re-install my work tools              |
 
 Follow my journey as I push towards becoming a stronger developer, one day at a time. 💻
 
