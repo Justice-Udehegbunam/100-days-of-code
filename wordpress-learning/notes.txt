@@ -1,0 +1,43 @@
+# How to start up a Xammp server
+- Open Xampp
+- go to the control executable file 
+-  Start it up 
+# How to change a Port on a Xampp server
+
+Stop the server go to config, then to ports then find thw .unif file executablePath then change two listening options there to the preffered ports eg (8080) to avoid port conflict
+
+To open the  ADmin server type localhost:<portNo>/phpmyadmin
+
+that will take you to the php admin where you can configure the database 
+
+DATABASE FIELDS
+user_name: Justice
+host_name: localhost
+pwd: password1 on both sql and WP
+dbName: wordpress
+
+PLUGINS
+Those are basically the add-ons to the wp functionality
+
+To make a page be the default page (Dashboard page) 
+-Go to Dashboard
+- Settings
+- Reading
+- Check the static option, and select the particular page you want enabled
+
+To make a menu bar (If you dont want the new themes)
+- Go to Appearance 
+-  Select menu
+- Name and Edit 
+- You once you create you can go back to setting add the links that should be displayed on the menu bar
+
+Theme Customizer vs  Full Site Editing
+
+Theme Customizer  is basically a layout preset that theme developers give to be able to get off with some basic theme and then customize it to our taste.
+
+WHILE 
+
+Full site editing is basically a new way to edit the look and feel of the entire site at once (though it only comes from themes above 2022 and its not really in use)
+
+Page Builder 
+Most themes in wordpress are generic (they dont support page building: basically editing individual elements on the main section). They only support Editing individual stuffs on the header and footer section
