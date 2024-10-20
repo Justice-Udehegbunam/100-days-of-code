@@ -1,11 +1,12 @@
 # 100 Days of Code: [Justice Udehegbunam](https://github.com/Justice-Udehegbunam)
 
 Welcome to my **100 Days of Code** journey! 🚀  
-I’m diving deep into software development, not just to clone websites but to truly understand the **why** and **how** behind the code. My goal is to become a competent and creative frontend developer.
+I’m diving deep into software development, not just to clone websites but to truly understand the **why** and **how** behind the code. My goal is to become a versatile, competent and creative frontend developer.
 
 ## Goals
 
 - Reinforce the fundamentals of **JavaScript**, **React**, and **Next.js**.
+- Learn Wordpress
 - Move beyond simply cloning sites to mastering the principles of effective web development.
 - Share daily progress and challenges faced.
 - Build new projects and refine my skills.
@@ -36,8 +37,13 @@ I’m diving deep into software development, not just to clone websites but to t
 | 20  | Node.js Contd Contd                       |
 | 21  | Node.js Contd Contd                       |
 | 21  | Started learning Wordpress                |
-| 22  | N/A              |
-| 23 |Re-install my work tools              |
+| 22  | N/A                                       |
+| 23  | Re-install my work tools                  |
+| 23  | Started from where i stopped              |
+| 23  | Learn Wordpress                           |
+| 23  | Learn Wordpress Cont'd                    |
+| 23  | Learn Wordpress Cont'd                    |
+| 23  | Learn Wordpress Cont'd                    |
 
 Follow my journey as I push towards becoming a stronger developer, one day at a time. 💻
 
