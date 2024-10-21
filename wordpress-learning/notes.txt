@@ -41,3 +41,26 @@ Full site editing is basically a new way to edit the look and feel of the entire
 
 Page Builder 
 Most themes in wordpress are generic (they dont support page building: basically editing individual elements on the main section). They only support Editing individual stuffs on the header and footer section
+
+# Styling header section
+When you are un the theme Customizer you will see the header option to style (the header: is the main nav)
+
+In wordpress they have 6 header types
+- Minimal (with basic styling)
+- Transparent: This usually takes the background of what is below it 
+- Top menu: This splits up the header into two setcions the main menu on top and then Site name and info on a seperate position if possible
+- Fullscreen: Makes it show the menu with the full screen width when clicked
+- Central header
+- Medium header
+- Vertical header
+- Custom header
+
+Wordpress links styling
+
+
+Sub menu stylying -> Sub menu styling is basically simple (sub menu is that deopdown you get when you hover on a menu) you just go to the customize appearances and then to menus and first add the menu but now move its location a bit forward indicating that you want to make it a sub menu for a particular link and like that
+
+Designing the footer
+The footer is divided to two section the copyright section and the Footer widget section (which i think comes with the installation of classic widgets) 
+-  To set the copy right go to the first option the theme customizer and then work
+- To work on the footer widgets go to the footer widgets and then click to show how many columns you need, Then go back to the widgets then add contents and style it
