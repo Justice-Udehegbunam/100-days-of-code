@@ -9,3 +9,6 @@ Section 4 Command Line Arguments
 If you try to run this command "node app.cjs justice" in your terminal normally it supposed to fail but it wont because the main node app.cjs will run but the last argument will be saved in somewhere called PROCESS Global variable
 
 Couldnt code much today but i have to eep the streak going, see you tommmorrow
+
+# Storing Data with json
+Note: The different between the json in js and regular json is that json is just a string that you store but you cant access anything.
