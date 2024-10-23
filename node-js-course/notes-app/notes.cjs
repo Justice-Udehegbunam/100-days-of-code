@@ -24,6 +24,10 @@ const addNote = (title, body) => {
   }
 };
 
+const removeNote = (title) => {
+  console.log(`This book title is: ${title}`);
+};
+
 const loadNotes = () => {
   try {
     const dataBuffer = fs.readFileSync("notes.json");
@@ -42,4 +46,5 @@ const saveNotes = (notes) => {
 module.exports = {
   getNotes,
   addNote,
+  removeNote,
 };
