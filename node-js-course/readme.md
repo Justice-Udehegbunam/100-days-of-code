@@ -16,3 +16,16 @@ This is what allows chrome to interact with the DOM because technically the DOM 
 - I need it for my interactive comments section app
 
 Essentially every file you create is basically a module in node.js with its own scope just like how a function is given its own scope
+
+# Notes App Documentation
+
+So yea for over a week i was working on a notes application that uses the fs (File System), chalk and JSON to Create, Read Update and Delete notes on the Json file based on Command Line Arguments passed on the terminal
+
+## What did I learn
+
+- I learnt that chalk is a really good package to be able to use to display terminal messages in a more easy to understand fashion
+- I learnt also that "--" in node/terminal is use to tell the application that this is a Command Line Argument (or CLA's as i like to call them).
+- Yargs offer built in support for properly parsing command line arguments.
+- Learnt new yargs methods
+
+All in all i learnt a lot so i guess to the next one!
