@@ -2,15 +2,14 @@ const chalk = require("chalk");
 const fs = require("fs");
 
 // REFACTORING CHALLENGE
-
-const getNotes = () => "Your notes";
-
 const addNote = (title, body) => {
   const notes = loadNotes();
 
-  const duplicateNotes = notes.filter((note) => note.title === title);
+  // const duplicateNotes = notes.filter((note) => note.title === title);
+  //Refined version
+  const duplicateNote = notes.find((note) => note.title === title);
 
-  if (duplicateNotes.length === 0) {
+  if (!duplicateNote) {
     notes.push({
       title: title,
       body: body,
@@ -74,9 +73,23 @@ const listNotes = () => {
   notes.forEach((note) => console.log(`Note title: ${note.title}`));
 };
 
+const readNote = (givenTitle) => {
+  const notes = loadNotes();
+
+  const match = notes.find((title) => title.title === givenTitle);
+
+  if (match) {
+    console.log(chalk.inverse(match.title));
+    console.log(`Body : ${match.body}`);
+  } else {
+    console.log(chalk.bgRed("No note with that title"));
+    return;
+  }
+};
+
 module.exports = {
-  getNotes,
   addNote,
   removeNote,
   listNotes,
+  readNote,
 };

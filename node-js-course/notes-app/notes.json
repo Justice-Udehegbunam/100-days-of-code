@@ -1,1 +1,6 @@
-[{"title":"my title","body":"my body"},{"title":"New note","body":"My todays note"},{"title":"my today schedule","body":"My todays schedule is hectic"}]
+[
+  { "title": "my title", "body": "my body" },
+  { "title": "New note", "body": "My todays note" },
+  { "title": "my today schedule", "body": "My todays schedule is hectic" },
+  { "title": "t", "body": "b" }
+]

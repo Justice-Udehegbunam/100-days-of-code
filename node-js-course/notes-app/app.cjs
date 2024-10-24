@@ -47,4 +47,21 @@ yargs.command({
   },
 });
 
+yargs.command({
+  command: "read",
+  describe: "Read note command",
+
+  builder: {
+    title: {
+      describe: "give a title",
+      demandOption: true,
+      type: "string",
+    },
+  },
+
+  handler: (args) => {
+    notes.readNote(args.title);
+  },
+});
+
 yargs.parse(); //Done with V1
