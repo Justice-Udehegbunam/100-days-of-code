@@ -1,7 +1,7 @@
-const fs = require("fs");
-
 const notes = require("./notes.cjs");
 const yargs = require("yargs");
+
+// REFACTORING CHALLENGE
 
 yargs.command({
   command: "add",
@@ -19,7 +19,7 @@ yargs.command({
       type: "string",
     },
   },
-  handler: function (args) {
+  handler(args) {
     notes.addNote(args.title, args.body);
   },
 });
@@ -35,8 +35,15 @@ yargs.command({
     },
   },
 
-  handler: (args) => {
-    notes.removeNote(args.title);
+  handler: (args) => notes.removeNote(args.title),
+});
+
+yargs.command({
+  command: "list",
+  describe: "List notes command",
+
+  handler() {
+    notes.listNotes();
   },
 });
 
