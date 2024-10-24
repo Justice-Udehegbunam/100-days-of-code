@@ -64,3 +64,11 @@ Designing the footer
 The footer is divided to two section the copyright section and the Footer widget section (which i think comes with the installation of classic widgets) 
 -  To set the copy right go to the first option the theme customizer and then work
 - To work on the footer widgets go to the footer widgets and then click to show how many columns you need, Then go back to the widgets then add contents and style it
+
+So basically  to edit pages via the main page builder route especially when using Ocean WP themes you have to install ocean extra. Then you go on the edit page and 
+1. Remove the deafult title (By clicking on disable title)
+2. And the side bar (by setting the page width to 100% in the general tab)
+This just supplements you and gives you the opportunity then to style it as you want via the elementor page builder plugin
+
+Sections Columns and Elements in Elementor
+
