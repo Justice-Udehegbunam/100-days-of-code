@@ -29,3 +29,7 @@ So yea for over a week i was working on a notes application that uses the fs (Fi
 - Learnt new yargs methods
 
 All in all i learnt a lot so i guess to the next one!
+
+# Debugging in Node.js
+
+- debugger: This is a tool specific to node.js (but is also compatible with the google v8 engine) that helps u debugg your code, on its own it doesnt do anything ooh but once you run "node inspect <filename>.js then it kicks into action showing you what all the variable u have looks like. Then you can view it on chrome by going to "chrome://inspect"
