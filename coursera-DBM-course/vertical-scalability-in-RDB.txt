@@ -1,0 +1,25 @@
+When databases are described as "vertically scalable," it means that their performance can be improved by adding more resources (e.g., CPU, memory, or storage) to a single server. This contrasts with "horizontal scalability," where performance is enhanced by adding more servers to distribute the load across multiple machines.
+
+Key Points of Vertical Scalability:
+
+Single Server Scaling:
+
+	Vertically scalable databases handle increased workloads by upgrading the server hardware 	(e.g., switching to a more powerful CPU, adding more RAM, or using faster storage).
+	Common with relational databases like MySQL and PostgreSQL, which are often optimized for 	single-server performance.
+	Limits of Vertical Scaling:
+
+There’s usually a practical or cost limit to how much hardware can be added to a single machine.
+After reaching a certain capacity, vertical scaling may become less feasible or too expensive, which is why many large-scale applications use horizontally scalable databases.
+Example Use Case:
+
+Vertical scaling is often used when managing smaller or mid-sized datasets or when simplicity and consistency are prioritized over extreme scalability.
+Vertical vs. Horizontal Scaling:
+Vertical Scaling: Upgrading a single server (e.g., relational databases like MySQL, SQL Server).
+Horizontal Scaling: Adding multiple servers to share the workload (e.g., distributed databases like MongoDB, Cassandra).
+In summary, "vertically scalable" databases are optimized to increase their capacity and handle more significant workloads by enhancing the existing hardware, rather than relying on multiple servers.
+
+
+
+
+
+

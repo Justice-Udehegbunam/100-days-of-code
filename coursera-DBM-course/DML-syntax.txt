@@ -1,0 +1,23 @@
+Data Manipulation Language (DML)
+The SQL DML commands provide the ability to query, delete and update data in the database.  Use the following commands in this category.
+
+INSERT Command
+
+Purpose: To add records of data into an existing table. 
+
+Syntax to insert data into three columns in a table:
+INSERT INTO table_name (column1, column2, column3) VALUES (value1, value2, value3);
+
+UPDATE Command 
+
+Purpose: To modify or update data contained within a table in the database. 
+
+Syntax to update data in two columns:
+UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;
+
+DELETE Command
+
+Purpose: To delete data from a table in the database.
+
+Syntax to delete data:
+DELETE FROM table_name WHERE condition;

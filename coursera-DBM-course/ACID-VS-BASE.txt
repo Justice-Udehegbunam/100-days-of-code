@@ -1,0 +1,33 @@
+ACID Model
+The ACID model is a set of properties ensuring reliable transactions in relational databases (like MySQL, PostgreSQL).
+
+ACID Properties:
+Atomicity: Ensures that all parts of a transaction are completed; if any part fails, the entire transaction is rolled back.
+
+Example: In a bank transfer, both debit and credit operations occur together, or neither happens.
+Consistency: Guarantees that a transaction moves the database from one valid state to another, maintaining all predefined rules (e.g., constraints).
+
+Example: After a transaction, no data integrity rules (like foreign keys) are violated.
+Isolation: Ensures that transactions operate independently without interference, so concurrent transactions don’t affect each other's outcome.
+
+Example: A query doesn’t see partial updates from a transaction still in progress.
+Durability: Once a transaction is committed, its changes are permanent, even if a system crash occurs.
+
+Example: After a purchase is confirmed, it remains confirmed even if the system goes down right after.
+Use Cases: ACID is ideal for applications requiring high accuracy and consistency, like banking, finance, or online stores.
+
+BASE Model
+The BASE model is often applied to NoSQL databases designed for high scalability and availability, making some trade-offs on consistency.
+
+BASE Properties:
+Basically Available: The system guarantees availability, even in cases where some nodes fail.
+
+Example: A NoSQL database may allow reads and writes even if one of the replicas is down.
+Soft State: The state of the system may change over time, even without new transactions due to eventual synchronization between nodes.
+
+Example: Data might appear outdated temporarily until it’s updated in all replicas.
+Eventual Consistency: The system will become consistent over time, but immediate consistency across all nodes is not guaranteed.
+
+Example: After updating a record, it might take a few seconds for that change to appear across all nodes.
+Use Cases: BASE is ideal for high-availability applications that can tolerate temporary inconsistencies, like social media platforms, e-commerce recommendations, and large-scale data streaming services.
+

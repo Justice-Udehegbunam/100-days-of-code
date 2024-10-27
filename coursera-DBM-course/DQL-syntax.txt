@@ -1,0 +1,10 @@
+Data Query Language (DQL)
+The SQL DQL commands provide the ability to query and retrieve data from the database.  Use the following command in this category.
+
+SELECT Command
+
+Purpose: To retrieve data from tables in the database. 
+
+Syntax to select data from a table:
+
+SELECT * FROM table_name;

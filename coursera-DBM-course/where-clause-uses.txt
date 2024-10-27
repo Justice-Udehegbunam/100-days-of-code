@@ -1,0 +1,114 @@
+WHERE Clause uses
+In this reading, you’ll explore the usage of the WHERE clause for filtering data. You’ve learned about the purpose and the syntax of the WHERE clause. You’ve also learned how it behaves with different types of operands (namely text-based or numeric) based on the data type of the table column. You explored the types of operators that can be used in the WHERE clause. The main objective of this reading is to present some more examples and scenarios in which the WHERE clause is used to filter data in a table.
+
+    
+
+The WHERE clause
+The WHERE clause is useful when you want to filter data in a table based on a given condition in the SQL statement.The WHERE clause in SQL is there for the purpose of filtering records and fetching only the necessary records. This can be used in SQL SELECT, UPDATE and DELETE statements.
+
+The filtering happens based on a condition. The condition can be written using any of the following comparison or logical operators.
+
+
+Comparison operators   
+Operator
+
+Description
+
+=
+
+Checks if the values of two operands are equal or not. If yes, then condition becomes true.
+
+!=
+
+Checks if the values of two operands are equal or not. If values are not equal, then condition becomes true.
+
+<>
+
+Checks if the values of two operands are equal or not. If values are not equal, then condition becomes true.
+
+>
+
+Checks if the value of the left operand is greater than the value of the right operand. If yes, then condition becomes true.
+
+<
+
+Checks if the value of left operand is less than the value of right operand. If yes, then condition becomes true.
+
+>=
+
+Checks if the value of the left operand is greater than or equal to the value of right operand. If yes, then condition becomes true.
+
+<=
+
+Check if the value of the left operand is less than or equal to the value of the right operand. If yes then condition becomes true.
+
+!<
+
+Checks if the value of the left operand is not less than the value of the right operand. If yes, then condition becomes true.
+
+!>
+
+Checks if the value of the left operand is not greater than the value of the right operand. If yes, then condition becomes true.
+
+
+Logical operators   
+Operator
+
+Description
+
+ALL
+
+
+Used to compare a single value to all the values in another value set.
+
+AND
+
+
+Allows for the existence of multiple conditions in an SQL statement's WHERE clause.
+
+ANY
+
+
+Used to compare a value to any applicable value in the list as per the condition.
+
+BETWEEN
+
+
+Used to search for values that are within a set of values, given the minimum value and the maximum value.
+
+EXISTS
+
+
+Used to search for the presence of a row in a specified table that meets a certain criterion.
+
+IN
+
+
+Used to compare a value to a list of literal values that have been specified.
+
+LIKE
+
+
+Used to compare a value to similar values using wildcard operators.
+
+NOT
+
+
+Reverses the meaning of the logical operator with which it is used. For example: NOT EXISTS, NOT BETWEEN, NOT IN, etc. This is a negate operator.
+
+OR
+
+
+Used to combine multiple conditions in an SQL statement's WHERE clause.
+
+IS NULL
+
+
+Used to compare a value with a NULL value.
+
+UNIQUE
+
+
+Searches every row of a specified table for uniqueness (no duplicates).
+
+

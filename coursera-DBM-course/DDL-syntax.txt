@@ -1,0 +1,41 @@
+Data Definition Language (DDL)
+The SQL DDL category provides commands for defining, deleting and modifying tables in a database. Use the following commands in this category.
+
+CREATE Command
+
+Purpose: To create the database or tables inside the database
+
+Syntax to create a table with three columns:
+CREATE TABLE table_name (column_name1 datatype(size), column_name2 datatype(size), column_name3 datatype(size));
+
+DROP Command 
+
+Purpose: To delete a database or a table inside the database. 
+
+Syntax to drop a table:
+DROP TABLE table_name;
+
+
+ALTER Command 
+
+Purpose: To change the structure of the tables in the database such as changing the name of a table, adding a primary key to a table, or adding or deleting a column in a table.
+
+Syntax to alter a table
+ALTER TABLE table_name ADD (column_name datatype(size));
+ALTER TABLE table_name ADD primary key (column_name);
+
+
+TRUNCATE Command
+
+Purpose: To remove all records from a table, which will empty the table but not delete the table itself. 
+
+Syntax to truncate a table
+TRUNCATE TABLE table_name;
+
+
+COMMENT Command
+
+Purpose: To add comments to explain or document SQL statements by using double dash (--) at the start of the line. Any text after the double dash will not be executed as part of the SQL statement. These comments are not there to build the database. They are only for your own use.   
+
+Syntax to comment in sql
+--Retrieve all data from a table  // <- Thats a comment ooh
