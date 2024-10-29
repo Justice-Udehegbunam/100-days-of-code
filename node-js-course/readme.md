@@ -33,3 +33,9 @@ All in all i learnt a lot so i guess to the next one!
 # Debugging in Node.js
 
 - debugger: This is a tool specific to node.js (but is also compatible with the google v8 engine) that helps u debugg your code, on its own it doesnt do anything ooh but once you run "node inspect <filename>.js then it kicks into action showing you what all the variable u have looks like. Then you can view it on chrome by going to "chrome://inspect"
+
+Then if you close the debugger and want to reopen it you have to just type the word "restart" on your terminal and it will restart the debbuger giving you access to that inspect link
+
+# Weather App
+
+I have been learning about how to query weather stack api and dynamically convert text location to geo location coordinates using geo location api

@@ -22,8 +22,6 @@ const addNote = (title, body) => {
   }
 };
 
-debugger;
-
 const removeNote = (title) => {
   const notes = loadNotes();
 
