@@ -39,3 +39,5 @@ Then if you close the debugger and want to reopen it you have to just type the w
 # Weather App
 
 I have been learning about how to query weather stack api and dynamically convert text location to geo location coordinates using geo location api
+
+Low-Level Errors: This is an error that happens usually on the users OS where in which the error property exists but the response doesn't

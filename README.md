@@ -8,7 +8,9 @@ I’m diving deep into software development, not just to clone websites but to t
 - Reinforce the fundamentals of **JavaScript**, **React**, and **Next.js**.
 - Learn Wordpress
 - Move beyond simply cloning sites to mastering the principles of effective web development.
-- Share daily progress and challenges faced.
+- Share progress and challenges faced.
+- Strengthen my portfolioand skills.
+- Gain clarity on my path to the job market.
 - Build new projects and refine my skills.
 
 ## Progress Tracker
