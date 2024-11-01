@@ -2,9 +2,7 @@
 
 const request = require("postman-request");
 
-// const url =
-//   "https://api.weatherstack.com/current?access_key=&query=6.8570,7.3834";
-
+// const url = "https://api.weatherstack.com/current?access_key=53d5c6d178d53ebcb753860c72a59132&query=6.8570,7.3834";
 // // json - sets body to JSON representation of value and adds Content-type: application/json header. Additionally, parses the response body as JSON.
 // request(url, { json: true }, (error, response) => {
 //   // const data = JSON.parse(response.body);
@@ -26,8 +24,7 @@ const request = require("postman-request");
 // Geocoding api
 
 const geoAPI =
-  "https://api.opencagedata.com/geocode/v1/json?q=missippi&key=&limit=1";
-
+  "https://api.opencagedata.com/geocode/v1/json?q=ikki&key=bf04b86b881842e0898fd7b43bc4c529&limit=1";
 request(geoAPI, { json: true }, (error, response) => {
   if (error) {
     console.log("Poor internet connectivity!");
