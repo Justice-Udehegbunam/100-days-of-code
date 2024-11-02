@@ -72,3 +72,11 @@ This just supplements you and gives you the opportunity then to style it as you 
 
 Sections Columns and Elements in Elementor
 
+stylying in Elementor  Layout-style-Advanced
+
+Most used section styles are the 
+- Height 
+- Inner Width
+- background color
+- background image
+- background overlay
