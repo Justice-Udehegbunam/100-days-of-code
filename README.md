@@ -80,3 +80,7 @@ Feel free to reach out on my social media:
 
 - LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/justice-udehegbunam/)
 - Twitter: [Your Twitter](https://x.com/FavouredJustice)
+
+## Notes
+
+- Am almost halfway there at Day 43!
