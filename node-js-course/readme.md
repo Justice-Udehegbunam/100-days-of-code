@@ -38,7 +38,7 @@ Then if you close the debugger and want to reopen it you have to just type the w
 
 # Weather App
 
-[geocode API](https://api.opencagedata.com/geocode/v1/json?q=ikki&key=bf04b86b881842e0898fd7b43bc4c529&limit=1)
+[geocode API](https://api.opencagedata.com/geocode/v1/json?q=ikki&key=bf04b86b881842e0898fd7b43bc4c529&limit=1) and [Weather Stack API](https://api.weatherstack.com/current?access_key=53d5c6d178d53ebcb753860c72a59132&query=6.8570,7.3834)
 
 I have been learning about how to query weather stack api and dynamically convert text location to geo location coordinates using geo location api
 

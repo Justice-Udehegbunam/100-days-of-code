@@ -7,11 +7,11 @@ const forecast = (lat, long, callback) => {
     if (error) {
       callback("No network detected!");
     } else if (response.body.success === false) {
-      callback("Unable to find a location!");
+      callback("Unable to find a location!", undefined);
     } else {
       const data = response.body.current;
 
-      callback({
+      callback(undefined, {
         description: data,
         temperature: data.temperature,
         feelsLike: data.feelslike,
@@ -19,5 +19,7 @@ const forecast = (lat, long, callback) => {
     }
   });
 };
+
+module.exports = forecast;
 
 module.exports = forecast;
