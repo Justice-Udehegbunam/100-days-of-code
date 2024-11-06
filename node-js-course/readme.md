@@ -47,3 +47,7 @@ Low-Level Errors: This is an error that happens usually on the users OS where in
 Call-back Pattern: The call back pattern is really usefull in node.js and how it operates because since node-js is single threaded and it still needs to handle async await calls that might still havent return but might want to run an output with that return, callbacks are useful cos they are like accomapany function that gets passed to the main async function when its fully ready to use.
 
 ### Encode URI component
+
+### Callback Chaining
+
+### Manual request setup
