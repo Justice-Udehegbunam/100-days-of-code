@@ -7,13 +7,13 @@ const geoCode = (address, callback) => {
     "&key=bf04b86b881842e0898fd7b43bc4c529&limit=1";
 
   request(url, { json: true }, (error, response) => {
+    const data = response.body.results[0];
+
     if (error) {
       callback("Unable to connect to location services!");
-    } else if (response.body.status.code === 400) {
+    } else if (response.body.status.code === 400 || data == undefined) {
       callback("Please check your location input and try again!");
     } else {
-      const data = response.body.results[0];
-
       callback(undefined, {
         lat: data.geometry.lat,
         long: data.geometry.lng,
