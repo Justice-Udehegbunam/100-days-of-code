@@ -115,4 +115,4 @@ Feel free to reach out on my social media:
 
 ## Day
 
-- Am almost halfway there at Day 47!
+- Am almost halfway there at Day 48!
