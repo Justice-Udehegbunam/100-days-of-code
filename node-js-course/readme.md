@@ -53,3 +53,10 @@ Call-back Pattern: The call back pattern is really usefull in node.js and how it
 ### Manual request setup
 
 ### Web Servers - Express
+
+In reality you never send just plain text response its either you send Html to display a page on the browser or you send JSON data to be consumed
+
+"**dirname": This is get the path to the current directory of the node js application
+"**filename": This is use to get the name of the executed file.
+
+When creating web servers index.html has a special meaning (you dont have to load up the specific path for it)
