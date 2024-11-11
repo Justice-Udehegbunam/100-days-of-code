@@ -60,3 +60,9 @@ In reality you never send just plain text response its either you send Html to d
 "**filename": This is use to get the name of the executed file.
 
 When creating web servers index.html has a special meaning (you dont have to load up the specific path for it)
+
+### Template engine to render dynamic webpages
+
+Handlebars: The "hbs" package is the handlebarjs package for express use case
+
+Handle bars is basically html code with some flexibility for dynamic contentt rendering and it has the ".hbs" file extension
