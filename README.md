@@ -1,14 +1,14 @@
 # 100 Days of Code: [Justice Udehegbunam](https://github.com/Justice-Udehegbunam)
 
 Welcome to my **100 Days of Code** journey! 🚀  
-I’m diving deep into software development, not just to clone websites but to truly understand the **why** and **how** behind the code. My goal is to become a versatile, competent, and creative frontend developer.
+I’m diving deep into software development, not just to clone websites but to truly understand the **why** and **how** behind the code. My goal is to become a versatile, competent, and creative software developer.
 
 ---
 
-### 🏆 **Day 50/100: Progress Tracker**
+### 🏆 **Day 51/100: Progress Tracker**
 
 `████████████████░░░░░░░░░░░░░░░`  
-**50% Complete**
+**51% Complete**
 
 ---
 
