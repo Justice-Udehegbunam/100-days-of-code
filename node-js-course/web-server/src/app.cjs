@@ -1,15 +1,23 @@
 const path = require("path"); // core node module
 
 const express = require("express");
+const hbs = require("hbs");
 
 const app = express();
+
+//  Express config paths
 const publicDir = path.join(__dirname, "../public");
+const viewsPath = path.join(__dirname, "../templates/views");
+const partialsPath = path.join(__dirname, "../templates/partials");
 //  Once you load up this public directory you can then get access to all its documents there not just one when you use it in express.static
 
-app.use(express.static(publicDir));
+//  Setup handlebars engine and views location
+app.set("view engine", "hbs");
+app.set("views", viewsPath); // the first param is the type of express setting you want and the second is the package that should handle that
+hbs.registerPartials(partialsPath);
 
-app.set("view engine", "hbs"); // the first param is the type of express setting you want and the second is the package that should handle that
-app.set("views", path.join(__dirname, "../views"));
+// Setup static directory to serve
+app.use(express.static(publicDir));
 
 app.get("", (req, res) => {
   // this is used to render the views that you have in your "views" folder
@@ -21,10 +29,14 @@ app.get("", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", {});
+  res.render("about", { title: "About Weather", name: "Justice" });
 });
 app.get("/help", (req, res) => {
-  res.render("help", { message: "Do you need help!" });
+  res.render("help", {
+    message: "Do you need help!",
+    title: "Help",
+    name: "Justice",
+  });
 });
 
 app.get("/weather", (req, res) => {
