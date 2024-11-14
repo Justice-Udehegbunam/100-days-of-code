@@ -80,6 +80,8 @@ This is a daily log of my 100-day coding journey, focused on skill-building, lea
 | 49  | Continuation                                                       |
 | 50  | Celebrated milestone and documented progress                       |
 | 51  | Started with coursera intro to cloud computing                     |
+| 52  | Spent more time on coding                                          |
+| 53  | Debugging my templates app                                         |
 
 ---
 
