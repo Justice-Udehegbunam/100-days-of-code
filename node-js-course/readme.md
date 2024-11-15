@@ -72,3 +72,5 @@ Handle bars is basically html code with some flexibility for dynamic contentt re
 This is when you create a little template that is part of a bigger web page, its just like components in react
 
 in nodemon if you want it to restart the server only when certain files are changed you can set it via "nodemon appp.cjs -e js,hbs,cjs" this tells nodemon to only restart the server when files with this extension are changed
+
+Took a break today!!!
