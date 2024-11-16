@@ -1,4 +1,4 @@
-const path = require("path"); // core node module
+const path = require("path");
 
 const express = require("express");
 const hbs = require("hbs");
