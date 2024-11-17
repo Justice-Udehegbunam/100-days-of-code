@@ -7,14 +7,16 @@ const app = express();
 
 //  Express config paths
 const publicDir = path.join(__dirname, "../public");
-const viewsPath = path.join(__dirname, "../templates/views");
-const partialsPath = path.join(__dirname, "../templates/partials");
+const viewsPath = path.join(__dirname, "../views");
+const partialsPath = path.join(__dirname, "../partials");
+hbs.registerPartials(partialsPath);
+console.log(partialsPath);
+
 //  Once you load up this public directory you can then get access to all its documents there not just one when you use it in express.static
 
 //  Setup handlebars engine and views location
 app.set("view engine", "hbs");
 app.set("views", viewsPath); // the first param is the type of express setting you want and the second is the package that should handle that
-hbs.registerPartials(partialsPath);
 
 // Setup static directory to serve
 app.use(express.static(publicDir));
