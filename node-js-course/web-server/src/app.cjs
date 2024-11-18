@@ -8,7 +8,7 @@ const app = express();
 //  Express config paths
 const publicDir = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../views");
-const partialsPath = path.join(__dirname, "../partials");
+const partialsPath = path.join(__dirname, "../field");
 hbs.registerPartials(partialsPath);
 console.log(partialsPath);
 
