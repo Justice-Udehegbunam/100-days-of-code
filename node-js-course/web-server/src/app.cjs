@@ -10,7 +10,6 @@ const publicDir = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../views");
 const partialsPath = path.join(__dirname, "../field");
 hbs.registerPartials(partialsPath);
-console.log(partialsPath);
 
 //  Once you load up this public directory you can then get access to all its documents there not just one when you use it in express.static
 
@@ -43,6 +42,14 @@ app.get("/help", (req, res) => {
 
 app.get("/weather", (req, res) => {
   res.send({ forecast: "1ts 15 degrees", location: "Kaduna" });
+});
+
+app.get("/help/*", (req, res) => {
+  res.send("Help ");
+});
+
+app.get("*", (req, res) => {
+  res.send("My 404 page!!");
 });
 
 app.listen(5000, () => {
