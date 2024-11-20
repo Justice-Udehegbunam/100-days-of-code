@@ -76,3 +76,5 @@ in nodemon if you want it to restart the server only when certain files are chan
 ## 404 pages
 
 this is a way of setting up the express server in such a way that instead of showing the generic "Cannot Get/<filename>" it shows something useful to the user
+
+Was able to learn how to set up complex matched routing using the wild card (\*) selector in express

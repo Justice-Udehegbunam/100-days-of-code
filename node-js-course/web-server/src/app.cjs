@@ -45,11 +45,19 @@ app.get("/weather", (req, res) => {
 });
 
 app.get("/help/*", (req, res) => {
-  res.send("Help ");
+  res.render("notfound", {
+    error: "Help article not found!",
+    title: "404!",
+    name: "Justice",
+  });
 });
 
 app.get("*", (req, res) => {
-  res.send("My 404 page!!");
+  res.render("notfound", {
+    error: "Page not found!",
+    title: "404!",
+    name: "Justice",
+  });
 });
 
 app.listen(5000, () => {
