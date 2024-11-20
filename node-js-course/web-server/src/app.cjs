@@ -30,7 +30,7 @@ app.get("", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: "About Weather", name: "Justice" });
+  res.render("about", { title: "About", name: "Justice" });
 });
 app.get("/help", (req, res) => {
   res.render("help", {
