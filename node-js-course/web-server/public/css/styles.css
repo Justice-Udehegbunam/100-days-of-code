@@ -1,3 +1,4 @@
+/* Universal Styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,49 +11,145 @@ body {
   max-width: 650px;
   margin: 0 auto;
   padding: 0 1rem;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #f4f4f9; /* Light background */
 }
 
+/* Main Content */
 .main-content {
   flex-grow: 1;
+  padding: 2rem 0;
 }
 
+/* Header Styling */
 header {
-  margin-top: 16px;
-  margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 4rem;
   margin-bottom: 1rem;
+  color: #4e90f7; /* Accent color for header */
 }
 
-.nav {
+/* Paragraphs */
+p {
+  margin: 15px 0;
+  text-align: center;
+  color: #555;
+}
+
+/* Form Styling */
+form {
   display: flex;
-  max-width: 400px;
-  gap: 24px;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-header a {
-  color: #888;
-  text-decoration: none;
+form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-header a:hover {
-  text-decoration: underline;
+form button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #4e90f7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.potrait {
-  width: 250px;
+form button:hover {
+  background-color: #3b74c9;
 }
 
+/* Weather Info Section */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#message-one {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#message-two {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+img {
+  max-width: 50px;
+  height: auto;
+}
+
+span {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Error Message Styling */
+.error-message {
+  background-color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Footer Styling */
 footer {
   color: #888;
   border-top: 2px solid #eee;
   margin-top: 2rem;
   padding: 1rem 0;
+  text-align: center;
   width: 100%;
+  background-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  form input {
+    width: 60%;
+  }
+
+  form button {
+    width: 30%;
+  }
+
+  #message-one {
+    font-size: 1.2rem;
+  }
+
+  #message-two {
+    font-size: 1rem;
+  }
+
+  img {
+    max-width: 40px;
+  }
 }
