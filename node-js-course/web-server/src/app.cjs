@@ -3,6 +3,9 @@ const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
 
+const forecast = require("./utils/forecast.cjs");
+const geoCode = require("./utils/geoCode.cjs");
+
 const app = express();
 
 //  Express config paths
@@ -41,8 +44,43 @@ app.get("/help", (req, res) => {
 });
 
 app.get("/weather", (req, res) => {
-  res.send({ forecast: "1ts 15 degrees", location: "Kaduna" });
+  const address = req.query.address;
+
+  if (!address) {
+    return res.send({
+      error: "You didn't provide the address of the requested location",
+    });
+  }
+
+  geoCode(address, (error, data) => {
+    if (error) {
+      return res.send({ error: `There is an error: ${error}` });
+    }
+
+    if (!data || !data.lat || !data.long || !data.location) {
+      return res.send({
+        error:
+          "Unable to find location. Please check the address and try again.",
+      }); // Return here to stop further execution
+    }
+
+    const { lat, long, location } = data;
+
+    forecast(lat, long, (error, foreCast) => {
+      if (error) {
+        return res.send({ error: `Error in forecast: ${error}` }); // Return here to send the forecast error
+      }
+
+      return res.send({ Location: location, foreCast: foreCast }); // Finally, send the result if everything is okay
+    });
+  });
 });
+
+// app.get("/products", (req, res) => {
+//   console.log(req.query);
+
+//   res.send({ products: [] });
+// });
 
 app.get("/help/*", (req, res) => {
   res.render("notfound", {
