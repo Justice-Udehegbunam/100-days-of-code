@@ -56,14 +56,6 @@ app.get("/weather", (req, res) => {
     if (error) {
       return res.send({ error: `There is an error: ${error}` });
     }
-
-    // if (!data || !data.lat || !data.long || !data.location) {
-    //   return res.send({
-    //     error:
-    //       "Unable to find location. Please check the address and try again.",
-    //   }); // Return here to stop further execution
-    // }
-
     forecast(lat, long, (error, foreCast) => {
       if (error) {
         return res.send({ error: `Error in forecast: ${error}` }); // Return here to send the forecast error
@@ -73,12 +65,6 @@ app.get("/weather", (req, res) => {
     });
   });
 });
-
-// app.get("/products", (req, res) => {
-//   console.log(req.query);
-
-//   res.send({ products: [] });
-// });
 
 app.get("/help/*", (req, res) => {
   res.render("notfound", {
