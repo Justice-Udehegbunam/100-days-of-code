@@ -52,19 +52,17 @@ app.get("/weather", (req, res) => {
     });
   }
 
-  geoCode(address, (error, data) => {
+  geoCode(address, (error, { lat, long, location } = {}) => {
     if (error) {
       return res.send({ error: `There is an error: ${error}` });
     }
 
-    if (!data || !data.lat || !data.long || !data.location) {
-      return res.send({
-        error:
-          "Unable to find location. Please check the address and try again.",
-      }); // Return here to stop further execution
-    }
-
-    const { lat, long, location } = data;
+    // if (!data || !data.lat || !data.long || !data.location) {
+    //   return res.send({
+    //     error:
+    //       "Unable to find location. Please check the address and try again.",
+    //   }); // Return here to stop further execution
+    // }
 
     forecast(lat, long, (error, foreCast) => {
       if (error) {
