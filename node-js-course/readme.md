@@ -71,7 +71,7 @@ Handle bars is basically html code with some flexibility for dynamic contentt re
 
 This is when you create a little template that is part of a bigger web page, its just like components in react
 
-in nodemon if you want it to restart the server only when certain files are changed you can set it via "nodemon appp.cjs -e js,hbs,cjs" this tells nodemon to only restart the server when files with this extension are changed
+in nodemon if you want it to restart the server only when certain files are changed you can set it via "nodemon app.cjs -e js,hbs,cjs" this tells nodemon to only restart the server when files with this extension are changed
 
 ## 404 pages
 
@@ -80,3 +80,8 @@ this is a way of setting up the express server in such a way that instead of sho
 Was able to learn how to set up complex matched routing using the wild card (\*) selector in express
 
 # How to Deploy Http JSON endpoints for Weather app.
+
+- Deploying with heroku: So basically this is my first time deploying a project on heroku so its going to be a wonderful experience
+
+1. Got started via sign up and authentication
+2. Proceeded to install heroku CLI
