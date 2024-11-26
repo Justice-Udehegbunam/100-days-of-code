@@ -129,3 +129,5 @@ True growth comes from understanding fundamentals deeply, not just replicating o
 
 - **LinkedIn**: [Justice Udehegbunam](https://www.linkedin.com/in/justice-udehegbunam/)
 - **Twitter**: [FavouredJustice](https://x.com/FavouredJustice)
+
+- Had some important papers today will be back by morning!!
