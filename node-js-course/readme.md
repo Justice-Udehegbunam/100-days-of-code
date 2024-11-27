@@ -85,3 +85,18 @@ Was able to learn how to set up complex matched routing using the wild card (\*)
 
 1. Got started via sign up and authentication
 2. Proceeded to install heroku CLI
+3. Check version via heroku -v
+4. Login via "heroku login" command
+
+And thats all for heroku set up
+
+### Setting up SSH keys
+
+- SSH : This stands for "Secure SHell" It gives us a means of communicating with another machine
+  "ls -a -l ~/.ssh" is used to check if you already have an ssh folder in your project
+
+To create ssh keys u use "ssh-keygen -t rsa -b 4096 -C "justicefavour491@gmail.com" This will open a wizard that u just need to press enter
+
+### Registering your ssh files
+
+"ssh add" is the command
