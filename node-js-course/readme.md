@@ -100,3 +100,8 @@ To create ssh keys u use "ssh-keygen -t rsa -b 4096 -C "justicefavour491@gmail.c
 ### Registering your ssh files
 
 "ssh add" is the command
+
+### Databases and MongoDB
+
+We are working on a task manager project to explore more about MongoDB
+NO-SQL: "Not Only Structured Query Language"
