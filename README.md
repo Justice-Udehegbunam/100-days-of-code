@@ -131,3 +131,5 @@ True growth comes from understanding fundamentals deeply, not just replicating o
 - **Twitter**: [FavouredJustice](https://x.com/FavouredJustice)
 
 - Had some important papers today will be back by morning!!
+
+Trying to download tools later in the night
