@@ -35,3 +35,6 @@ while (b <= 10000) {
 /* for loop syntax
 for (initializer; condition; increment) {
 workload;}  */
+
+console.log("Testing Jump Line \n\n");
+console.log("Did it work!");

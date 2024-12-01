@@ -103,5 +103,12 @@ To create ssh keys u use "ssh-keygen -t rsa -b 4096 -C "justicefavour491@gmail.c
 
 ### Databases and MongoDB
 
+To start up mongoDB for me: "/Users/Justice/mongodb/bin/mongod.exe --dbpath /Users/Justice/mongodb-data"
+
 We are working on a task manager project to explore more about MongoDB
 NO-SQL: "Not Only Structured Query Language"
+In the tutorial we used Robo 3T which has now been changed to Studio 3T for the GUI
+
+## Mongo DB native driver for node
+
+to install mongoDB node driver "npm install mongodb@6.11"
