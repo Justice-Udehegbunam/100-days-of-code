@@ -13,7 +13,16 @@ async function run() {
     console.log("Connected to the MongoDB server.");
 
     const db = client.db(dbName);
-    db.collection("Users").insertOne({ name: "Justice", age: "18" });
+    db.collection("Users").insertOne(
+      { name: "Victory", age: "18" },
+      (error, result) => {
+        if (error) {
+          return console.log("Unable to insert user!");
+        }
+
+        console.log(result.ops);
+      }
+    );
   } catch (error) {
     console.error("An error occurred:", error);
   } finally {
