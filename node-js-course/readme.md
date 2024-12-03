@@ -112,3 +112,4 @@ In the tutorial we used Robo 3T which has now been changed to Studio 3T for the 
 ## Mongo DB native driver for node
 
 to install mongoDB node driver "npm install mongodb@6.11"
+Am coming back tommorrow preparing for an exam
