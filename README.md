@@ -81,7 +81,27 @@ This is a daily log of my 100-day coding journey, focused on skill-building, lea
 | 50  | Celebrated milestone and documented progress                       |
 | 51  | Started with coursera intro to cloud computing                     |
 | 52  | Spent more time on coding                                          |
-| 53  | Debugging my templates app                                         |
+| 53  | Call-back Chaining and express web servers                         |
+| 54  | Call-back Chaining and express web servers                         |
+| 55  | Call-back Chaining and express web servers                         |
+| 56  | Call-back Chaining and express web servers                         |
+| 57  | Call-back Chaining and express web servers                         |
+| 58  | Learnt about Templating with Handlebars                            |
+| 59  | Learnt about Templating with Handlebars                            |
+| 60  | 404 Pages                                                          |
+| 61  | 404 Pages                                                          |
+| 62  | Got started with deploying to Heroku                               |
+| 63  | Got started with deploying to Heroku                               |
+| 64  | Got started with deploying to Heroku                               |
+| 65  | Learnt about SSH keys                                              |
+| 66  | Learnt about SSH keys                                              |
+| 67  | Learnt about SSH keys                                              |
+| 68  | Got started with Databases and MonGoDB                             |
+| 69  | Got started with Databases and MonGoDB                             |
+| 70  | Got started with Databases and MonGoDB                             |
+| 71  | Got started with Databases and MonGoDB                             |
+| 72  | Slowing down due to exams                                          |
+| 73  | Slowing down due to exams                                          |
 
 ---
 
