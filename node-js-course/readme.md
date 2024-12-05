@@ -112,3 +112,17 @@ In the tutorial we used Robo 3T which has now been changed to Studio 3T for the 
 ## Mongo DB native driver for node
 
 to install mongoDB node driver "npm install mongodb@6.11"
+
+## Object ID's in MongoDB
+
+it is different from nosql databases that uses auto-incrementing id's it uses GU id's (Globally Unique ID's)
+
+#### how to manually generate objectID
+
+- The mongoDB GU ID is a 12-byte string which is not just randomly generated but its divided into:
+
+1. first 4-byte: a timestamp value in seconds starting from the Unix Epoch (January 1 1970 UTC)
+2. 5-byte random value
+3. 3-byte increment value
+   "6750aee4c283e1a62f865c6f"
+   ID's are visualization of the actual binary

@@ -55,5 +55,4 @@ async function run() {
   }
 }
 
-// Run the function
 run().catch(console.dir);

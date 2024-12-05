@@ -5,10 +5,10 @@ I’m diving deep into software development, not just to clone websites but to t
 
 ---
 
-### 🏆 **Day 51/100: Progress Tracker**
+### 🏆 **Day 73/100: Progress Tracker**
 
-`████████████████░░░░░░░░░░░░░░░`  
-**51% Complete**
+`███████████████████░░░░░░░░`  
+**73% Complete**
 
 ---
 
