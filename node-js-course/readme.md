@@ -126,3 +126,13 @@ it is different from nosql databases that uses auto-incrementing id's it uses GU
 3. 3-byte increment value
    "6750aee4c283e1a62f865c6f"
    ID's are visualization of the actual binary
+
+## REST API's and Mongoose
+
+- What's Mongoose: Mongoose is used to allow us to do more important stuffs on MongoDB and set up some stucture to your mongoDB database
+
+### Mongoose Modelling
+
+A model is what allows us to model something in the real world that we want to store in the database
+
+Mongoose Falls into a broader category of tools called ODM's (Object Document Mapper)
