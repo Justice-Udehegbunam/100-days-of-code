@@ -136,3 +136,12 @@ it is different from nosql databases that uses auto-incrementing id's it uses GU
 A model is what allows us to model something in the real world that we want to store in the database
 
 Mongoose Falls into a broader category of tools called ODM's (Object Document Mapper)
+
+### Data Validation & Data Sanitization
+
+- Data validation: Allows us enforce some rules on data
+- Data Sanitization: Allows us to do some cleanup on the data for the data before saving
+
+**NOTE**: Instead of stressing yourself you can use [npm validator](https://www.npmjs.com/package/validator)
+
+\_\_V: Stores the version of the data
