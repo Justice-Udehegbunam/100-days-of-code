@@ -2,6 +2,7 @@ const express = require("express");
 require("./db/mongoose.cjs");
 
 const User = require("./models/user.cjs");
+const Task = require("./models/task.cjs");
 
 const app = express();
 
@@ -16,8 +17,25 @@ app.post("/users", (req, res) => {
     .save()
     .then(() => {
       res.send(user);
+      console.log("Success!");
     })
     .catch((e) => {
+      res.status(400).send(e);
+      console.log(" " + e);
+    });
+});
+
+app.post("/tasks", (req, res) => {
+  const task = new Task(req.body);
+
+  task
+    .save()
+    .then(() => {
+      res.send(task);
+    })
+    .catch((e) => {
+      res.status(400).send(e);
+
       console.log(" " + e);
     });
 });
