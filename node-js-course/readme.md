@@ -145,3 +145,12 @@ Mongoose Falls into a broader category of tools called ODM's (Object Document Ma
 **NOTE**: Instead of stressing yourself you can use [npm validator](https://www.npmjs.com/package/validator)
 
 \_\_V: Stores the version of the data
+
+## REST API (Representational State Transfer Application Programming Interface)
+
+- REST: This allows client to acces and manipulate resources using a set of predefined operations.
+- API: Its a set of tools that allows us to build applications.
+
+Every single REST API operation is defined with two pieces of data the http method and the path.
+
+What is an HTTP request:
