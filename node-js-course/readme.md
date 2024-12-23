@@ -154,3 +154,5 @@ Mongoose Falls into a broader category of tools called ODM's (Object Document Ma
 Every single REST API operation is defined with two pieces of data the http method and the path.
 
 What is an HTTP request:
+
+## Promise Chaining
