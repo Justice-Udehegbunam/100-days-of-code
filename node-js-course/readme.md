@@ -156,3 +156,11 @@ Every single REST API operation is defined with two pieces of data the http meth
 What is an HTTP request:
 
 ## Promise Chaining
+
+## ASYNC AWAIT
+
+When you add an async keyword to a function it becomes a promise and the return value is the fufillment value
+
+Throwomg am error is just like rejecting param in promise
+
+Async-await just helps us to provide more sync to asynchronous operations
