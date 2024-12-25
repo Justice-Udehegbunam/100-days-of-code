@@ -161,6 +161,6 @@ What is an HTTP request:
 
 When you add an async keyword to a function it becomes a promise and the return value is the fufillment value
 
-Throwomg am error is just like rejecting param in promise
+Throwing an error is just like rejecting param in promise
 
 Async-await just helps us to provide more sync to asynchronous operations
