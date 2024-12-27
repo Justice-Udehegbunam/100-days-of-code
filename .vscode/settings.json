@@ -1,0 +1,5 @@
+{
+  "prettier.bracketSameLine": false,
+  "prettier.endOfLine": "crlf",
+  "editor.language.colorizedBracketPairs": []
+}

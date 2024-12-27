@@ -4,6 +4,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      colors: {
+        lightGray: "666e75",
+        mediumGray: "222328",
+        deepGray: "222328",
+
+        borderColor: "e6ebf4",
+      },
       screens: {
         xs: "480px",
       },
@@ -19,3 +26,4 @@ module.exports = {
   },
   plugins: [],
 };
+
